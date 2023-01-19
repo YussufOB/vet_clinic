@@ -8,7 +8,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 <a name="readme-top">ReadMe</a>
 
-# 📖 [Vet Clinic] <a name="about-project">Vet Clinic</a>
+# 📖 <a name="about-project">Vet Clinic</a>
 
 **[Vet Clinic]** is a animals database that shows animals names, id, date of birth, weight, escape attempts and neutered.
 
@@ -29,9 +29,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 👥 Author <a name="author">Yussuf O.B</a>
 
-- GitHub: [@githubhandle](https://github.com/YussufOB)
-- Twitter: [@twitterhandle](https://twitter.com/yussufob)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/yussuf_bashir)
+- GitHub: [@YussufOB](https://github.com/YussufOB)
+- Twitter: [@yussufob](https://twitter.com/yussufob)
+- LinkedIn: [@yussuf_bashir](https://linkedin.com/in/yussuf_bashir)
 
 ## 🙏 Acknowledgments <a name="acknowledgements">Acknowledgment</a>
 
