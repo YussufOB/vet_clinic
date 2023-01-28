@@ -36,24 +36,7 @@ SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
 SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, AVG(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-01-01' GROUP BY species;
 
-CREATE TABLE owners(
-  id SERIAL PRIMARY KEY,
-  full_name VARCHAR(255),
-  age INT
-);
-
-CREATE TABLE
-  CREATE TABLE species(
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255)
-);
-
-ALTER TABLE animals DROP COLUMN species;
-ALTER TABLE animals ADD COLUMN species_id INT, ADD CONSTRAINT species_id FOREIGN KEY(species_id) REFERENCES species(id);
-ALTER TABLE animals ADD COLUMN owners_id INT, ADD CONSTRAINT owners_id FOREIGN KEY(owners_id) REFERENCES owners(id);
 SELECT name FROM animals WHERE animals.owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Melody Pond');
-INSERT INTO owners(full_name, age) VALUES ('Sam Smith', 34),('Jeniffer Orwell', 19),('Bob', 45),('Melody Pond', 77),('Dean Winchester', 14),('Jodie Whittaker', 38);
-INSERT INTO species(name) VALUES ('Pokemon'),('Digimon');
 SELECT name, full_name FROM animals INNER JOIN owners ON animals.owners_id = owners.id WHERE owners.full_name = 'Melody Pond';
 SELECT animals.name, species.name FROM animals INNER JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
 SELECT owners.full_name, animals.name FROM owners LEFT JOIN animals ON animals.owners_id = owners.id;

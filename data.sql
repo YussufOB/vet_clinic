@@ -14,7 +14,6 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
     ('Ditto', '2022-05-14', 4, true, 22.00)
 ;
 
-
 UPDATE animals SET species_id = (SELECT id FROM species WHERE species.name = 'Digimon') WHERE animals.name LIKE '%mon';
 UPDATE animals SET species_id = (SELECT id FROM species WHERE species.name = 'Pokemon') WHERE animals.name NOT LIKE '%mon';
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Sam Smith') WHERE animals.name = 'Agumon';
@@ -22,3 +21,9 @@ UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = '
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Bob') WHERE animals.name IN ('Plantmon', 'Devimon');
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Melody Pond') WHERE animals.name IN ('Charmander', 'Blossom', 'Squirtle');
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Dean Winchester') WHERE animals.name IN ('Angemon', 'Boarmon');
+
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD COLUMN species_id INT, ADD CONSTRAINT species_id FOREIGN KEY(species_id) REFERENCES species(id);
+ALTER TABLE animals ADD COLUMN owners_id INT, ADD CONSTRAINT owners_id FOREIGN KEY(owners_id) REFERENCES owners(id);
+INSERT INTO owners(full_name, age) VALUES ('Sam Smith', 34),('Jeniffer Orwell', 19),('Bob', 45),('Melody Pond', 77),('Dean Winchester', 14),('Jodie Whittaker', 38);
+INSERT INTO species(name) VALUES ('Pokemon'),('Digimon');
