@@ -8,3 +8,14 @@ id INT GENERATED ALWAYS AS IDENTITY,
     neutered BOOLEAN,
     weight_kg DECIMAL
 );
+
+CREATE TABLE owners(
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(255),
+  age INT
+);
+
+CREATE TABLE species(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
