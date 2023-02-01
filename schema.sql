@@ -45,6 +45,5 @@ CREATE TABLE vets(
 );
 
 --Indexing would be better option for optimizing the query performance in this scenario cause provides a fast and efficient way to locate rows in visits and owners tables based on  specific  values (id and email columns). Denormalization may not be efficient since we are not to collect data from both tables.
-CREATE INDEX index_animal ON visits(animal_id);
 CREATE INDEX index_vet ON visits(vet_id);
 CREATE INDEX index_email ON owners(email);
