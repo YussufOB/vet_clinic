@@ -1,10 +1,27 @@
 /*Queries that provide answers to the questions from all projects.*/
 
-SELECT * FROM animals WHERE name like '%mon';
-SELECT * FROM animals WHERE date_of_birth >= '2016-01-01' AND date_of_birth <= '2019-01-01';
-SELECT name FROM animals WHERE neutered = TRUE AND escape_attempts < 3;
-SELECT name FROM animals WHERE date_of_birth >= '2016-01-01' AND date_of_birth <= '2019-01-01';
-SELECT (name, escape_attempts) FROM animals WHERE weight_kg > 10.5;
+SELECT * FROM animals WHERE
+  name like '%mon'
+;
+
+SELECT * FROM animals WHERE
+  date_of_birth >= '2016-01-01'
+  AND date_of_birth <= '2019-01-01'
+;
+
+SELECT name FROM animals WHERE
+  neutered = TRUE AND escape_attempts < 3
+;
+
+SELECT name FROM animals WHERE
+  date_of_birth >= '2016-01-01'
+  AND date_of_birth <= '2019-01-01'
+;
+
+SELECT name, escape_attempts FROM animals WHERE
+  weight_kg > 10.5
+;
+
 SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
 SELECT * FROM animals  WHERE neutered = TRUE;
 SELECT * FROM animals  WHERE name != 'Gabumon';
@@ -49,7 +66,7 @@ select species.name as species, count(animals.name) as nb_of_animals from animal
 SELECT animals.name, species.name, owners.full_name FROM animals JOIN species ON animals.species_id = species.id JOIN owners ON animals.owners_id = owners.id WHERE species.name = 'Digimon' AND owners.full_name = 'Jeniffer Orwell';
 SELECT animals.escape_attempts, owners.full_name FROM animals JOIN owners ON animals.owners_id = owners.id WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
 
-SELECT animals.name as animal_name, vets.name AS doc_name, visits.date_of_visit AS visit_date FROM visits JOIN vets ON vet_id = vets.id JOIN animals ON animal_id = animals.id WHERE vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher') ORDER BY date_of_visit DESC LIMIT 1;
+SELECT anmals.name as animal_name, vets.name AS doc_name, visits.date_of_visit AS visit_date FROM visits JOIN vets ON vet_id = vets.id JOIN animals ON animal_id = animals.id WHERE vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher') ORDER BY date_of_visit DESC LIMIT 1;
 SELECT COUNT(name) AS animal_count FROM visits JOIN vets ON visits.vet_id = vets.id WHERE visits.vet_id = (SELECT id FROM vets WHERE name = 'Stephaine Mendez');
 SELECT vets.name AS doc_name, species.name AS doc_spec FROM vets LEFT JOIN specializationS ON vets.id = specializations.vet_id LEFT JOIN species ON specializations.specie_id = species.id;
 SELECT animals.name AS animal_name FROM visits JOIN vets ON visits.vet_id = vets.id JOIN animals ON visits.animal_id = animals.id WHERE visits.vet_id = (SELECT id FROM vets WHERE name = 'Stephaine Mendez') AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
