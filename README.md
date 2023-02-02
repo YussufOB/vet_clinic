@@ -33,6 +33,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@yussufob](https://twitter.com/yussufob)
 - LinkedIn: [@yussuf_bashir](https://linkedin.com/in/yussuf_bashir)
 
+## 👥 Author <a name="author">Mirwais Farahi</a>
+
+- GitHub: [@githubhandle](https://github.com/mirwaisfarahi)
+- Twitter: [@twitterhandle](https://twitter.com/farahi92)
+
 ## 🙏 Acknowledgments <a name="acknowledgements">Acknowledgment</a>
 
 > Give credit to everyone who inspired your codebase.
