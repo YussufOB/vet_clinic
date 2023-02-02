@@ -22,6 +22,7 @@ UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = '
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Melody Pond') WHERE animals.name IN ('Charmander', 'Blossom', 'Squirtle');
 UPDATE animals SET owners_id = (SELECT id FROM owners WHERE owners.full_name = 'Dean Winchester') WHERE animals.name IN ('Angemon', 'Boarmon');
 
+/* insert data to vets, speclalization and visits tables */
 INSERT INTO vets(name, age, date_of_graduation) VALUES ('William Tatcher', 45, '2000-04-23'),('Maisy Smith', 26, '2019-01-17'),('Stephaine Mendez', 64, '1981-05-04'),('Jack Harkness', 38, '2008-06-08');
 INSERT INTO specializations(specie_id, vet_id) VALUES (1, 1),(2, 3),(1,3),(2, 4);
 INSERT INTO visits(animal_id, vet_id, date_of_visit) VALUES
