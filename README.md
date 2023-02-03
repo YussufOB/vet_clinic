@@ -1,4 +1,21 @@
-# Vet Clinic
+![](https://img.shields.io/badge/Microverse-blueviolet) 
+
+# The Vet Clinic Database
+
+> This project is about a vet clinic relational database built using PostgreSQL. It is made up of a series of tables which include
+- Animals table
+- Animal's owners
+- Clinic employees
+- Visits
+
+![schema_diagram](https://user-images.githubusercontent.com/104019280/199405522-dad14d77-e1bd-438c-9da8-c703fcde1f84.png)
+
+## Built With
+
+- Major languages: SQL and PostgreSQL
+- Technologies used: Git, Github and Gitflow
+
+## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
@@ -6,43 +23,41 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-<a name="readme-top">ReadMe</a>
+### Prerequisites
 
-# 📖 <a name="about-project">Vet Clinic</a>
+- install PosgreSQL Database
 
-**[Vet Clinic]** is a animals database that shows animals names, id, date of birth, weight, escape attempts and neutered.
+## Authors
 
-## 🛠 Built With <a name="built-with">PSQL</a>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features">Key features</a>
-
-- **[Display animal details]**
-- **[Display animal escape history]**
-
-
-## 👥 Author <a name="author">Yussuf O.B</a>
+👤 **Yussuf O.B**
 
 - GitHub: [@YussufOB](https://github.com/YussufOB)
 - Twitter: [@yussufob](https://twitter.com/yussufob)
 - LinkedIn: [@yussuf_bashir](https://linkedin.com/in/yussuf_bashir)
 
-## 🙏 Acknowledgments <a name="acknowledgements">Acknowledgment</a>
+👤 **Mirwais Farahi**
 
-> Give credit to everyone who inspired your codebase.
+- GitHub: [@mirwais](https://github.com/mirwaisfarahi)
+- Twitter: [@mirwais](https://twitter.com/farahi92)
+- LinkedIn: [@mirwais](https://linkedin.com/in/mirwais_farahi)
 
-I would like to thank my coding partners who make clear of some concept to me, thank you, you are amazing.
 
-## 📝 License <a name="license">License</a>
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to Microverse's code reviewers and to everyone who reviewed my project and made suggestions.
+
+## Acknowledgments
+
+## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
